@@ -31,7 +31,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-2 group" id="nav-logo">
-            <Zap className="text-primary w-6 h-6 group-hover:scale-110 transition-transform" strokeWidth={2.5} />
+            <img src="/LOGO.png" alt="Fleet Mobilities" className="h-8 w-auto group-hover:scale-110 transition-transform object-contain" />
             <span className="font-extrabold text-[17px] tracking-tight text-on-surface">
               Fleet <span className="text-primary-container">Mobilities</span>
             </span>

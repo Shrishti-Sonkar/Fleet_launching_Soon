@@ -28,7 +28,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="col-span-2 md:col-span-1 space-y-4">
           <div className="flex items-center gap-2">
-            <Zap className="text-primary w-6 h-6" strokeWidth={2.5} />
+            <img src="/LOGO.png" alt="Fleet Mobilities" className="h-8 w-auto object-contain" />
             <span className="font-bold text-[17px] tracking-tight text-on-surface">
               Fleet <span className="text-primary-container">Mobilities</span>
             </span>
