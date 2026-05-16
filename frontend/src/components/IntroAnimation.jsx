@@ -194,6 +194,7 @@ export default function IntroAnimation({ onDone }) {
 
         {/* Brand Reveal Text */}
         <div ref={textRef} className="absolute inset-0 flex flex-col items-center justify-center transition-none z-20 pointer-events-none" style={{ opacity: 0, transform: 'translateY(20px)' }}>
+          <img src="/LOGO.png" alt="Logo" className="h-20 md:h-24 w-auto mb-4 object-contain drop-shadow-2xl" />
           <h1 className="text-white text-5xl md:text-7xl font-black tracking-tight mb-2 drop-shadow-xl text-center font-sans">
             Fleet Mobilities
           </h1>
