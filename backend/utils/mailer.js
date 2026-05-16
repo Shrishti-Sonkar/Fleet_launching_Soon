@@ -1,33 +1,19 @@
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 import 'dotenv/config'
 
 // ── Check if email is configured ──────────────────────────────
-const isEmailConfigured = !!(process.env.EMAIL_USER && process.env.EMAIL_PASS)
+const isEmailConfigured = !!(process.env.RESEND_API_KEY)
 
 if (!isEmailConfigured) {
-  console.warn('⚠️  Mailer: EMAIL_PASS not set — emails will be skipped. Forms will still save to Firestore.')
+  console.warn('⚠️  Mailer: RESEND_API_KEY not set — emails will be skipped. Forms will still save to Firestore.')
 }
 
-const transporter = isEmailConfigured
-  ? nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 587,
-      secure: false,
-      requireTLS: true,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-      tls: {
-        rejectUnauthorized: false
-      }
-    })
-  : null
+const resend = isEmailConfigured ? new Resend(process.env.RESEND_API_KEY) : null
 
 // ── Safe send wrapper — silently skips if not configured ───────
-const safeSend = async (mailOptions) => {
-  if (!transporter) return null
-  return transporter.sendMail(mailOptions)
+const safeSend = async ({ from, to, subject, html }) => {
+  if (!resend) return null
+  return resend.emails.send({ from, to, subject, html })
 }
 
 // ── Shared header/footer HTML for branded emails ───────────────
@@ -98,7 +84,7 @@ export async function sendSubscriberConfirmation(email) {
   `)
 
   return safeSend({
-    from: `"Fleet Mobilities" <${process.env.EMAIL_USER}>`,
+    from: 'Fleet Mobilities <onboarding@resend.dev>',
     to: email,
     subject: '🛵 You\'re on the Fleet waitlist! Welcome aboard.',
     html,
@@ -108,8 +94,8 @@ export async function sendSubscriberConfirmation(email) {
 // ── 2. Internal notification — new subscriber ─────────────────
 export async function sendNewSubscriberAlert(email, source) {
   return safeSend({
-    from: `"Fleet Mobilities Bot" <${process.env.EMAIL_USER}>`,
-    to: process.env.EMAIL_USER,
+    from: 'Fleet Mobilities <onboarding@resend.dev>',
+    to: process.env.ADMIN_EMAIL || 'fleet.mobilities@gmail.com',
     subject: `📬 New Waitlist Signup — ${email}`,
     html: emailWrapper(`
       <p><strong>New subscriber joined the waitlist:</strong></p>
@@ -138,7 +124,7 @@ export async function sendContactConfirmation({ name, email, role, message }) {
   `)
 
   return safeSend({
-    from: `"Fleet Mobilities" <${process.env.EMAIL_USER}>`,
+    from: 'Fleet Mobilities <onboarding@resend.dev>',
     to: email,
     subject: `✅ We got your message, ${name}!`,
     html,
@@ -148,8 +134,8 @@ export async function sendContactConfirmation({ name, email, role, message }) {
 // ── 4. Internal notification — new contact form ───────────────
 export async function sendContactAlert({ name, email, role, message }) {
   return safeSend({
-    from: `"Fleet Mobilities Bot" <${process.env.EMAIL_USER}>`,
-    to: process.env.EMAIL_USER,
+    from: 'Fleet Mobilities <onboarding@resend.dev>',
+    to: process.env.ADMIN_EMAIL || 'fleet.mobilities@gmail.com',
     subject: `📨 New Contact Form — ${role} — ${name}`,
     html: emailWrapper(`
       <p><strong>New message received via contact form:</strong></p>
