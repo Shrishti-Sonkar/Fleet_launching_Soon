@@ -23,8 +23,9 @@ export default function CTA() {
   }
 
   return (
-    <section className="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-      <div className="bg-primary-container rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden">
+    <section className="py-24 bg-warm-cream">
+      <div className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <div className="bg-primary-container rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden">
         {/* Texture */}
         <div
           className="absolute inset-0 opacity-10"
@@ -74,6 +75,7 @@ export default function CTA() {
           {status === 'error' && (
             <p className="text-white/80 text-sm">{message}</p>
           )}
+        </div>
         </div>
       </div>
     </section>
