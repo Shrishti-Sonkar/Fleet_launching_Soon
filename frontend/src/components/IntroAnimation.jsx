@@ -116,7 +116,6 @@ export default function IntroAnimation({ onDone }) {
         if (progress === 1) {
           state.stage = 5
           state.startTime = time
-          setShowReplay(true) // Show replay just before exit logic
         }
       }
       else if (state.stage === 5) {
@@ -136,7 +135,6 @@ export default function IntroAnimation({ onDone }) {
   const exitSplash = () => {
     cancelAnimationFrame(reqRef.current)
     setShowSkip(false)
-    setShowReplay(false)
     if (overlayRef.current) {
       overlayRef.current.style.transform = 'translateY(-100vh)'
       overlayRef.current.style.opacity = '0'
