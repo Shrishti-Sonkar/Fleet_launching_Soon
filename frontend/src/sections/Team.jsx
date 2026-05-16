@@ -58,10 +58,10 @@ export default function Team() {
           {teamMembers.map((member, idx) => (
             <div 
               key={idx}
-              className="group relative bg-white rounded-3xl p-6 text-center border border-outline-variant/20 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+              className="group relative bg-white rounded-3xl p-6 text-center border border-outline-variant/20 shadow-sm hover:shadow-xl hover:border-primary hover:-translate-y-2 transition-all duration-300"
             >
               {/* Image */}
-              <div className="mx-auto w-24 h-24 mb-6 rounded-full overflow-hidden border-4 border-surface-container-low group-hover:border-primary-container/20 transition-colors duration-300">
+              <div className="mx-auto w-24 h-24 mb-6 rounded-full overflow-hidden border-4 border-surface-container-low group-hover:border-primary transition-colors duration-300">
                 <img 
                   src={member.image} 
                   alt={member.name} 
