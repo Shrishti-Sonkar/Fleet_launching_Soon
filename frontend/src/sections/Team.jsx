@@ -81,10 +81,10 @@ export default function Team() {
               </div>
 
               {/* Social Links (appear on hover/focus) */}
-              <div className="mt-6 flex justify-center gap-3 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
+              <div className="mt-6 flex justify-center gap-3 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 relative z-10">
                 <a 
                   href={`mailto:${member.email}`}
-                  className="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-tertiary hover:bg-primary hover:text-white transition-colors"
+                  className="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-tertiary hover:bg-primary hover:text-white transition-colors cursor-pointer"
                   title="Email"
                 >
                   <Mail className="w-4 h-4" />
@@ -93,7 +93,7 @@ export default function Team() {
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-tertiary hover:bg-[#0077b5] hover:text-white transition-colors"
+                  className="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-tertiary hover:bg-[#0077b5] hover:text-white transition-colors cursor-pointer"
                   title="LinkedIn"
                 >
                   <Linkedin className="w-4 h-4" />
