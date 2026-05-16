@@ -80,8 +80,8 @@ export default function Team() {
                 </p>
               </div>
 
-              {/* Social Links (appear on hover/focus) */}
-              <div className="mt-6 flex justify-center gap-3 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 relative z-10">
+              {/* Social Links */}
+              <div className="mt-6 flex justify-center gap-3 relative z-10">
                 <a 
                   href={`mailto:${member.email}`}
                   onClick={(e) => {
