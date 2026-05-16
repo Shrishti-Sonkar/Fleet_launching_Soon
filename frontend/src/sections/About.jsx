@@ -1,4 +1,4 @@
-import { CheckCircle } from 'lucide-react'
+import { CheckCircle, X } from 'lucide-react'
 
 export default function About() {
   return (
@@ -9,20 +9,20 @@ export default function About() {
         <div className="order-2 md:order-1">
           <div className="relative">
             <img
-              alt="Fleet warehouse interior — mountain-born vehicle hub"
+              alt="Premium motorcycle for rent"
               className="rounded-3xl shadow-2xl w-full object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJuaFi-pidE1HBtnDISy7Mk8QsH6f5gnKUf-jgovCPBAyMpcDRtqSLCrlqH97j1miHc6_7NuroHcNxaXg_0RJUGgBTEleh3kVxMWU5hL90L-MjKl21r1PHl2yMJyPOtKEtotQyBkbfDIr019Hd62TV1HNWySeNx4Yi396-yN8M3skFUpPlVC_gsVwc9fo-2wTTRn9eJZyGZs6NxzH8eO_AM_2ss7qu6iLtXmlGdlhyruOwpTo6w2ZSX0T7mBjK82DO9vNyfztkwk6g"
+              src="/hunter.jpg"
               loading="lazy"
             />
 
             {/* Floating stat card */}
             <div className="absolute -bottom-8 -right-8 bg-white p-8 rounded-2xl shadow-xl space-y-4 hidden lg:block">
               <div className="flex items-center gap-4">
-                <span className="font-headline-xl text-primary-container text-[40px] font-extrabold leading-none">
-                  50K+
+                <span className="font-headline-xl text-primary-container text-[32px] md:text-[40px] font-extrabold leading-none">
+                  Trusted
                 </span>
-                <span className="font-body-md font-bold uppercase tracking-widest text-secondary">
-                  Anticipated Trips
+                <span className="font-body-md font-bold uppercase tracking-widest text-secondary leading-tight">
+                  & Reliable<br/>Rides
                 </span>
               </div>
               {/* Progress bar */}
@@ -40,29 +40,50 @@ export default function About() {
           </span>
 
           <h3 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg">
-            Why Choose Fleet Mobilities?
+            Traditional Rentals vs Fleet Mobilities
           </h3>
 
           <p className="font-body-lg text-secondary">
-            Simple, reliable bike rentals designed for everyday travel.
+            A simpler, smarter way to rent and ride.
           </p>
 
-          <p className="font-body-md text-secondary">
-            Fleet Mobilities is built to make bike rentals easy and accessible for everyone. Whether you need a ride for daily use, college, or a short trip, we help you find and rent bikes without unnecessary hassle. Just choose your ride and get going.
-          </p>
-
-          {/* Highlights */}
-          <div className="space-y-4 pt-2">
-            {[
-              'Easy Booking Process',
-              'Well-maintained and reliable bikes',
-              'Support when you need it',
-            ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <CheckCircle className="text-primary w-5 h-5 flex-shrink-0" />
-                <p className="font-headline-md text-[18px] text-on-surface">{item}</p>
+          {/* Highlights / Comparison */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+            {/* Traditional Rentals */}
+            <div className="space-y-4">
+              <h4 className="font-bold text-on-surface/60 text-sm md:text-base uppercase tracking-wider border-b border-outline/30 pb-2">Traditional</h4>
+              <div className="space-y-3">
+                {[
+                  'Manual & slow booking',
+                  'Uncertain condition',
+                  'No live availability',
+                  'Hidden pricing',
+                ].map((item, i) => (
+                  <div key={`trad-${i}`} className="flex items-start gap-2">
+                    <X className="text-secondary w-5 h-5 flex-shrink-0 opacity-50 mt-0.5" />
+                    <p className="font-headline-md text-[15px] md:text-[16px] text-secondary/80 leading-tight">{item}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Fleet Mobilities */}
+            <div className="space-y-4">
+              <h4 className="font-bold text-primary text-sm md:text-base uppercase tracking-wider border-b border-primary/30 pb-2">Fleet Mobilities</h4>
+              <div className="space-y-3">
+                {[
+                  'Simple & fast booking',
+                  'Verified & maintained',
+                  'Real-time availability',
+                  'Transparent pricing',
+                ].map((item, i) => (
+                  <div key={`fleet-${i}`} className="flex items-start gap-2">
+                    <CheckCircle className="text-primary w-5 h-5 flex-shrink-0 mt-0.5" />
+                    <p className="font-headline-md text-[15px] md:text-[16px] text-on-surface leading-tight">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
