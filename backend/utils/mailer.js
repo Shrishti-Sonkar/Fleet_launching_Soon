@@ -8,12 +8,12 @@ if (!isEmailConfigured) {
   console.warn('⚠️  Mailer: EMAIL_PASS not set — emails will be skipped. Forms will still save to Firestore.')
 }
 
-// ── Transporter (only created if credentials exist) ────────────
 const transporter = isEmailConfigured
   ? nodemailer.createTransport({
       host: 'smtp.gmail.com',
-      port: 465,
-      secure: true,
+      port: 587,
+      secure: false,
+      requireTLS: true,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
