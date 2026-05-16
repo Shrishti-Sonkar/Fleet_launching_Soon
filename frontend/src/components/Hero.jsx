@@ -91,14 +91,18 @@ export default function Hero() {
           )}
 
           {/* Trust badges */}
-          <div className="flex flex-wrap gap-4 pt-4">
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/50 rounded-lg border border-outline-variant/10">
-              <ShieldCheck className="text-primary w-5 h-5" />
-              <span className="font-label-sm">Fully Insured</span>
+          <div className="flex flex-wrap xl:flex-nowrap gap-2 sm:gap-3 pt-4 w-full">
+            <div className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/50 rounded-lg border border-outline-variant/10 whitespace-nowrap">
+              <ShieldCheck className="text-primary w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="font-label-sm">Trusted Insurance</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/50 rounded-lg border border-outline-variant/10">
-              <Infinity className="text-primary w-5 h-5" />
+            <div className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/50 rounded-lg border border-outline-variant/10 whitespace-nowrap">
+              <Infinity className="text-primary w-4 h-4 sm:w-5 sm:h-5" />
               <span className="font-label-sm">Unlimited Km</span>
+            </div>
+            <div className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/50 rounded-lg border border-outline-variant/10 whitespace-nowrap">
+              <CheckCircle className="text-primary w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="font-label-sm">Trusted by many</span>
             </div>
           </div>
         </div>
@@ -139,7 +143,7 @@ export default function Hero() {
           <div className="absolute top-1/4 -right-10 glass-card p-4 rounded-2xl shadow-xl z-30 transform translate-x-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-primary-container rounded-full flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M13 2L4.09 12.97H11L10 22l8.91-10.97H13L13 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M13 2L4.09 12.97H11L10 22l8.91-10.97H13L13 2z" /></svg>
               </div>
               <div>
                 <p className="text-[10px] font-semibold text-secondary uppercase tracking-wider">Fleet Status</p>
