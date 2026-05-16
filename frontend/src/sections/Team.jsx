@@ -6,14 +6,14 @@ const teamMembers = [
     role: 'Co-Founder / COO',
     email: 'coo.fleetofficial@gmail.com',
     linkedin: 'https://www.linkedin.com/in/harsh-raj-a877453b5',
-    image: 'https://api.dicebear.com/7.x/initials/svg?seed=Harsh+Raj&backgroundColor=FF6B00&textColor=ffffff',
+    image: '/Harsh.jpeg',
   },
   {
     name: 'Diptanu Datta',
     role: 'Founder / CEO',
     email: 'ceo.fleetofficial@gmail.com',
     linkedin: 'https://www.linkedin.com/in/diptanu-datta-8ab909276',
-    image: 'https://api.dicebear.com/7.x/initials/svg?seed=Diptanu+Datta&backgroundColor=FF6B00&textColor=ffffff',
+    image: '/Diptanu.jpeg',
   },
   {
     name: 'Kartikey Jaiswal',
@@ -27,14 +27,14 @@ const teamMembers = [
     role: 'Technical Lead',
     email: 'shrishtisonkar01@gmail.com',
     linkedin: 'https://www.linkedin.com/in/shrishti-sonkar/',
-    image: 'https://api.dicebear.com/7.x/initials/svg?seed=Shrishti+Sonkar&backgroundColor=FF6B00&textColor=ffffff',
+    image: '/Shrishti.jpeg',
   },
   {
     name: 'Rishabh Singh Rawat',
     role: 'Media Manager',
     email: 'rishabhrwt527@gmail.com',
     linkedin: 'https://www.linkedin.com/in/rishabhsingh-rawat/',
-    image: 'https://api.dicebear.com/7.x/initials/svg?seed=Rishabh+Singh+Rawat&backgroundColor=FF6B00&textColor=ffffff',
+    image: '/Rishabh.jpeg',
   },
 ]
 
