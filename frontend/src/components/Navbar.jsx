@@ -24,21 +24,7 @@ export default function Navbar() {
         style={{ width: `${scrollProgress}%` }}
       />
 
-      {/* Navigation Dots */}
-      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col gap-4">
-        {['#hero', '#how-it-works', '#services', '#cities', '#about'].map((href, i) => (
-          <a
-            key={href}
-            href={href}
-            aria-label={`Navigate to section ${i + 1}`}
-            className={`w-3 h-3 rounded-full border-2 transition-colors ${
-              i === 0
-                ? 'bg-primary-container border-primary-container'
-                : 'bg-transparent border-outline hover:border-primary-container'
-            }`}
-          />
-        ))}
-      </div>
+
 
       {/* Top App Bar */}
       <header className="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm border-b border-outline-variant/30">

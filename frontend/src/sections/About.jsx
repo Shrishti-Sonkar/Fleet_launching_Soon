@@ -36,7 +36,7 @@ export default function About() {
         {/* ── Right: Text ── */}
         <div className="space-y-8 order-1 md:order-2">
           <span className="text-primary font-bold font-label-sm uppercase tracking-widest">
-            Why Fleet Mobilities
+            Why Fleet Mobilities ?
           </span>
 
           <h3 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg">
