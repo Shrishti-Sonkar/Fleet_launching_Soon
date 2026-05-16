@@ -8,7 +8,6 @@ export default function IntroAnimation({ onDone }) {
   const overlayRef = useRef(null)
 
   const [showSkip, setShowSkip] = useState(true)
-  const [showReplay, setShowReplay] = useState(false)
   const [isDone, setIsDone] = useState(false)
 
   const reqRef = useRef()
@@ -21,7 +20,6 @@ export default function IntroAnimation({ onDone }) {
   const startAnimation = () => {
     cancelAnimationFrame(reqRef.current)
     stateRef.current = { stage: 0, startTime: window.performance.now() }
-    setShowReplay(false)
     setShowSkip(true)
 
     // Reset styles
@@ -174,20 +172,7 @@ export default function IntroAnimation({ onDone }) {
         </button>
       )}
 
-      {/* Replay Button */}
-      <div
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 z-[10000] transition-all duration-300 ${showReplay ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none translate-y-4'}`}
-      >
-        <button
-          onClick={() => {
-            setShowReplay(false)
-            startAnimation()
-          }}
-          className="px-8 py-3 bg-white text-[#E84C3D] rounded-full font-bold text-base shadow-xl hover:scale-105 transition-transform"
-        >
-          Replay Animation
-        </button>
-      </div>
+
 
       <div className="relative w-full max-w-3xl h-[500px] flex items-center justify-center">
 
