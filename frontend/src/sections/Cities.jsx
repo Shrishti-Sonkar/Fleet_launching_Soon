@@ -9,7 +9,7 @@ const cities = [
     watermark: 'DOON',
     name: 'Dehradun',
     description: 'The valley of abundance and our main hub.',
-    badge: 'HEADQUARTERS',
+    badge: null,
   },
   {
     id: 'mussoorie',
