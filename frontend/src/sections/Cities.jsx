@@ -34,14 +34,14 @@ export default function Cities() {
   return (
     <section id="cities" className="py-24 overflow-hidden">
       {/* Section heading */}
-      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-12">
+      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-12 text-center">
         <h3 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg">
           Launching across key locations, starting with Uttarakhand
         </h3>
       </div>
 
       {/* Horizontal scroll strip */}
-      <div className="flex gap-8 px-margin-mobile md:px-margin-desktop overflow-x-auto pb-12 no-scrollbar">
+      <div className="flex gap-8 px-margin-mobile md:px-margin-desktop overflow-x-auto pb-12 no-scrollbar xl:justify-center">
         {cities.map((city) => (
           <CityCard key={city.id} {...city} />
         ))}
