@@ -20,7 +20,7 @@ const teamMembers = [
     role: 'Technical Lead',
     email: 'jaiswalkartikey559@gmail.com',
     linkedin: 'https://www.linkedin.com/in/kartikey790520',
-    image: 'https://api.dicebear.com/7.x/initials/svg?seed=Kartikey+Jaiswal&backgroundColor=FF6B00&textColor=ffffff',
+    image: '/Kartikey.jpeg',
   },
   {
     name: 'Shrishti Sonkar',
@@ -42,7 +42,7 @@ export default function Team() {
   return (
     <section id="team" className="py-24 bg-surface-container-lowest">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-        
+
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
           <span className="text-primary font-bold font-label-sm uppercase tracking-widest">
@@ -56,16 +56,16 @@ export default function Team() {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
           {teamMembers.map((member, idx) => (
-            <div 
+            <div
               key={idx}
               className="group relative bg-white rounded-3xl p-6 text-center border border-outline-variant/20 shadow-sm hover:shadow-xl hover:border-primary hover:-translate-y-2 transition-all duration-300"
             >
               {/* Image */}
               <div className="mx-auto w-24 h-24 mb-6 rounded-full overflow-hidden border-4 border-surface-container-low group-hover:border-primary transition-colors duration-300">
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="w-full h-full object-cover"
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className={`w-full h-full object-cover ${member.imageClass || ''}`}
                   loading="lazy"
                 />
               </div>
@@ -82,20 +82,20 @@ export default function Team() {
 
               {/* Social Links */}
               <div className="mt-6 flex justify-center gap-3 relative z-10">
-                <a 
+                <a
                   href={`mailto:${member.email}`}
                   onClick={(e) => {
                     try {
                       navigator.clipboard.writeText(member.email);
                       alert(`Email ID copied: ${member.email}`);
-                    } catch (err) {}
+                    } catch (err) { }
                   }}
                   className="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-tertiary hover:bg-primary hover:text-white transition-colors cursor-pointer"
                   title={member.email}
                 >
                   <Mail className="w-4 h-4" />
                 </a>
-                <a 
+                <a
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
