@@ -49,7 +49,7 @@ export default function Hero() {
 
           {/* Body */}
           <p className="font-body-lg text-secondary max-w-md">
-            Explore your city with ease — rent bikes instantly and ride on your terms.
+            Explore your city with ease rent bikes instantly and ride on your terms.
           </p>
 
           {/* Email form */}
