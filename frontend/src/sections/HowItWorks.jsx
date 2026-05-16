@@ -4,7 +4,7 @@ const steps = [
   {
     number: '1',
     title: 'Choose Your Ride',
-    description: 'Browse and select from our wide range of bikes and scooters available near you.',
+    description: 'Browse and select from our wide range of bikes, cars and scooters available near you.',
     icon: Bike,
   },
   {
