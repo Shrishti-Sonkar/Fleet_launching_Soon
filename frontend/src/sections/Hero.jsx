@@ -60,7 +60,7 @@ export default function Hero() {
                 <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-primary shadow-[0_0_10px_rgba(255,107,0,0.8)]"></span>
               </div>
               <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-on-surface">
-                Launching Soon in Uttarakhand
+                Launching Soon
               </span>
             </motion.div>
 
