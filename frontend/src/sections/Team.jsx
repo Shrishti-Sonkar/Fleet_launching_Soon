@@ -84,8 +84,14 @@ export default function Team() {
               <div className="mt-6 flex justify-center gap-3 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 relative z-10">
                 <a 
                   href={`mailto:${member.email}`}
+                  onClick={(e) => {
+                    try {
+                      navigator.clipboard.writeText(member.email);
+                      alert(`Email ID copied: ${member.email}`);
+                    } catch (err) {}
+                  }}
                   className="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-tertiary hover:bg-primary hover:text-white transition-colors cursor-pointer"
-                  title="Email"
+                  title={member.email}
                 >
                   <Mail className="w-4 h-4" />
                 </a>
