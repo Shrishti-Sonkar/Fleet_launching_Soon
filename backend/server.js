@@ -15,6 +15,8 @@ const allowedOrigins = [
   'http://localhost:5174',
   'http://localhost:5175',
   'https://fleet-mobilities.vercel.app',
+  'https://fleetmobilities.in',
+  'https://www.fleetmobilities.in',
 ]
 app.use(
   cors({
