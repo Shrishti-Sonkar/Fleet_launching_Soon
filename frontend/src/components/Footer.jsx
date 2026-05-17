@@ -15,9 +15,7 @@ const socialLinks = [
 
 const companyLinks = [
   { label: 'About Us', href: '#about' },
-  { label: 'Safety', href: '#' },
   { label: 'Partners', href: '#connect' },
-  { label: 'Privacy Policy', href: '#' },
 ]
 
 export default function Footer() {
