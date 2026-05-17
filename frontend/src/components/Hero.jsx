@@ -94,7 +94,7 @@ export default function Hero() {
           <div className="flex flex-wrap xl:flex-nowrap gap-2 sm:gap-3 pt-4 w-full">
             <div className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/50 rounded-lg border border-outline-variant/10 whitespace-nowrap">
               <ShieldCheck className="text-primary w-4 h-4 sm:w-5 sm:h-5" />
-              <span className="font-label-sm">Trusted Insurance</span>
+              <span className="font-label-sm">Insurance</span>
             </div>
             <div className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/50 rounded-lg border border-outline-variant/10 whitespace-nowrap">
               <Infinity className="text-primary w-4 h-4 sm:w-5 sm:h-5" />
@@ -102,7 +102,7 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/50 rounded-lg border border-outline-variant/10 whitespace-nowrap">
               <CheckCircle className="text-primary w-4 h-4 sm:w-5 sm:h-5" />
-              <span className="font-label-sm">Trusted by many</span>
+              <span className="font-label-sm">Trusted</span>
             </div>
           </div>
         </div>

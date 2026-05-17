@@ -34,7 +34,7 @@ export default function Footer() {
             </span>
           </div>
           <p className="font-body-md text-tertiary">
-            Premium vehicle rentals for Uttarakhand.
+            Premium vehicle rentals for India.
           </p>
           {/* Social icons */}
           <div className="flex items-center gap-3 pt-2">
