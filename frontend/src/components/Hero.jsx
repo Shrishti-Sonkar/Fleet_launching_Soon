@@ -61,7 +61,7 @@ export default function Hero() {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-4 p-2 bg-white rounded-full shadow-lg border border-outline-variant/20 max-w-lg"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 p-2 sm:p-2 bg-white rounded-3xl sm:rounded-full shadow-lg border border-outline-variant/20 max-w-lg"
             >
               <input
                 id="hero-email-input"
@@ -71,14 +71,14 @@ export default function Hero() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 disabled={status === 'loading'}
-                className="flex-1 bg-transparent border-none focus:ring-0 px-6 font-body-md outline-none disabled:opacity-60"
+                className="flex-1 bg-transparent border-none focus:ring-0 px-6 py-4 sm:py-0 font-body-md outline-none disabled:opacity-60"
                 placeholder="Enter your email"
               />
               <button
                 id="hero-notify-btn"
                 type="submit"
                 disabled={status === 'loading'}
-                className="bg-primary-container text-white px-8 py-4 rounded-full font-headline-md text-body-md hover:shadow-xl transition-all disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap"
+                className="bg-primary-container text-white px-8 py-4 rounded-[2rem] sm:rounded-full font-headline-md text-body-md hover:shadow-xl transition-all disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap"
               >
                 {status === 'loading' ? 'Joining…' : 'Notify Me'}
               </button>
