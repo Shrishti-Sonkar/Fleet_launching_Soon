@@ -20,12 +20,12 @@ const cities = [
     badge: null,
   },
   {
-    id: 'delhi',
-    image: '/Delhi.png',
-    alt: 'Delhi',
+    id: 'kedarnath',
+    image: '/Kedarnath.jpg',
+    alt: 'Kedarnath',
     watermark: null,
-    name: 'Delhi',
-    description: 'Move through the city with fast and flexible bike rentals.',
+    name: 'Kedarnath',
+    description: 'Journey towards the sacred heights with reliable rides.',
     badge: null,
   },
 ]
