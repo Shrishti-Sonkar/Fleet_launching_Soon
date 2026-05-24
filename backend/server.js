@@ -17,6 +17,8 @@ const allowedOrigins = [
   'https://fleet-mobilities.vercel.app',
   'https://fleetmobilities.in',
   'https://www.fleetmobilities.in',
+  'https://fleetmobilities.info',
+  'https://www.fleetmobilities.info',
 ]
 app.use(
   cors({
